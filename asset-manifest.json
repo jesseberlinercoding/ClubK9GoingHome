@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ClubK9GoingHome/static/css/main.ba3e155b.css",
+    "main.js": "/ClubK9GoingHome/static/js/main.13f32ed5.js",
+    "index.html": "/ClubK9GoingHome/index.html",
+    "main.ba3e155b.css.map": "/ClubK9GoingHome/static/css/main.ba3e155b.css.map",
+    "main.13f32ed5.js.map": "/ClubK9GoingHome/static/js/main.13f32ed5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba3e155b.css",
+    "static/js/main.13f32ed5.js"
+  ]
+}
