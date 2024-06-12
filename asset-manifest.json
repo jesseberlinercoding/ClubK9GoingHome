@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ClubK9GoingHome/static/css/main.ba3e155b.css",
-    "main.js": "/ClubK9GoingHome/static/js/main.13f32ed5.js",
+    "main.css": "/ClubK9GoingHome/static/css/main.b5c3f549.css",
+    "main.js": "/ClubK9GoingHome/static/js/main.345e6b8b.js",
     "index.html": "/ClubK9GoingHome/index.html",
-    "main.ba3e155b.css.map": "/ClubK9GoingHome/static/css/main.ba3e155b.css.map",
-    "main.13f32ed5.js.map": "/ClubK9GoingHome/static/js/main.13f32ed5.js.map"
+    "main.b5c3f549.css.map": "/ClubK9GoingHome/static/css/main.b5c3f549.css.map",
+    "main.345e6b8b.js.map": "/ClubK9GoingHome/static/js/main.345e6b8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba3e155b.css",
-    "static/js/main.13f32ed5.js"
+    "static/css/main.b5c3f549.css",
+    "static/js/main.345e6b8b.js"
   ]
 }
