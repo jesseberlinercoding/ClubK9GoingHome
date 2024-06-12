@@ -72,11 +72,19 @@ export default function GoingHome() {
 			dog_name: reservation[1].animal.name.trim(),
 			owner_last: reservation[1].owner.last_name.trim(),
 			end: dayjs(reservation[1].end_date),
+			type: reservation[1].reservation_type.type,
 			canceled: reservation[1].cancelled_date === null ? false : true,
 			hasCheckedOut: reservation[1].check_out_date === null ? false : true
 		}
-		)).filter(res => (!res.canceled && !res.hasCheckedOut)).filter(res => (dayjs(res.end).format('MM-DD') === today.format('MM-DD')));
+		)).filter(res => (!res.canceled && !res.hasCheckedOut)).filter(res => !res.type.includes("Tour")).filter(res => (dayjs(res.end).format('MM-DD') === today.format('MM-DD')));
 		
+		returnObjects = returnObjects.map(dogRes => {
+			if(dogRes.type.includes("Eval")) {
+				dogRes = {...dogRes, dog_name: dogRes.dog_name.concat(" (eval)")} 
+			}
+			return dogRes;
+		});
+		console.log(returnObjects);
 		returnObjects.sort(sortDogs);
 		return returnObjects;
 	}
@@ -94,15 +102,18 @@ export default function GoingHome() {
 				<table>
 					<thead>
 					<tr>
-						<th>Dog name</th>
-						<th>Time</th>
+						<th className="count">#</th>
+						<th className="name">Dog name</th>
+						<th className="time">Time</th>
 					</tr>
 					</thead>
 					<tbody>
 					{globalArray.map((data, index) => (
+						
 						<tr key={index}>
-							<td>{data.dog_name}</td>
-							<td>{data.end.format('HHmm')}</td>
+							<td className="count">{index}</td>
+							<td className="name">{data.dog_name}</td>
+							<td className="time">{data.end.format('hh:mm a')}</td>
 						</tr>
 					))}
 					</tbody>
